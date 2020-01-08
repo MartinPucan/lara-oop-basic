@@ -24,11 +24,15 @@ class Person {
 
         $this->age = $age;
     }
+
+    public function __toString()
+    {
+        return $this->name;
+    }
 }
+
     $john = new Person('John Doe');
 
     $john->setAge(30);
 
-    $john->age = 6;
-
-    var_dump($john->getAge());
+    echo($john);
